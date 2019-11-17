@@ -10,3 +10,41 @@
   display: block;
   clear: both;
 }
+
+main {
+	width: 960px;
+	margin: 50px auto;
+}
+
+.list p {
+	padding: 20px;
+}
+
+.list p:nth-child(odd) {
+	background-color: #EEEEEE
+}
+
+.box {
+	margin-top: 50px;
+}
+
+.box-item {
+	height: 200px;
+	width: 30%;
+	margin-right: 5%;
+	margin-bottom: 40px;
+	background-color: #FFDB00;
+	float: left;
+}
+
+.box-item:nth-child(3n) {
+	margin: 0;
+}
+
+.box-item:nth-child(n+6) {
+	margin-bottom: 0;
+}
+
+.box-item:nth-child(1), .box-item:nth-child(5), .box-item:nth-child(9){
+	background-color: #FE8400
+}
