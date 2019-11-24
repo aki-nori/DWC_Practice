@@ -22,7 +22,7 @@
 	</div>
 <% end %>
 
-<%= form_for(@book) do |f| %>
+<%= form_for(@book, url: book_path(@book)) do |f| %>
 
 <% if error_flag_title %>
 <div class="field_with_errors">

@@ -18,5 +18,5 @@ Rails.application.routes.draw do
 #      rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
 
   resources :books
-  get "/" => "books#top"
+  root to: "books#top"
 end
