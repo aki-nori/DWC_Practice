@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
 	before_action :configure_permitted_parameters, if: :devise_controller?
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+  	#keys内に':email'も追加
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email])
   end
 
   #deviseにおけるLog_in/Log_out後の画面設定
@@ -15,6 +16,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(resource)
-    top_path # ログアウト後に遷移するpathを設定
+    root_path # ログアウト後に遷移するpathを設定
   end
 end

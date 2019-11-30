@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/show'
+  get "users/show"
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :edit, :update]
 
   #rootの設定
-  root 'books#top', as: :top
-  get 'home/about' => 'books#about', as: :about
+  root "books#top", as: :root
+  get "home/about" => "books#about", as: :about
 
 #                    Prefix Verb   URI Pattern                                                                              Controller#Action
 #                users_show GET    /users/show(.:format)                                                                    users#show
