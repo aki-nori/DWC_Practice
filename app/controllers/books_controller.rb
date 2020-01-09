@@ -20,7 +20,7 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
-    @book = Book.new  (book_params)
+    @book = Book.new(book_params)
     if @book.save
       redirect_to book_path(Book.last), :notice => 'Book was successfully created.'
     else
