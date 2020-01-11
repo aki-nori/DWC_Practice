@@ -20,6 +20,7 @@
 						<th></th>
 						<th>Title</th>
 						<th>Opinion</th>
+						<th><!-- いいね --></th>
 						<th colspan="3"></th>
 					</tr>
 				</thead>
@@ -34,6 +35,10 @@
 						</td>
 						<td><%= link_to book.title, book, class: "book_#{book.id}" %></td>
 						<td><%= book.body %></td>
+						<td>
+							<%= render 'books/favoritefunc', book: book %>
+						</td>
+						<td><%= "コメント数：#{book.book_comments.count}" %></td>
 					</tr>
 					<% end %>
 				</tbody>
