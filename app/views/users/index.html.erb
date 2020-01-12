@@ -26,6 +26,9 @@
 					<tr>
 						<td><%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "no-image-mini.jpg") %></td>
 						<td><%= user.name%></td>
+
+						<!-- 検索から遷移した場合は、フォローを非表示 -->
+						<% unless params[:controller] == "searchs" && params[:action] == "search" %>
 						<td><%= "フォーロー数：#{user.followers.count}" %></td>
 						<td><%= "フォロワー数：#{user.followings.count}" %></td>
 						<td>
@@ -37,6 +40,8 @@
 							<% end %>
 						<% end %>
 						</td>
+						<% end %>
+
 						<td><%= link_to "Show", user, class: "user_#{user.id}" %></td>
 					</tr>
 					<% end %>

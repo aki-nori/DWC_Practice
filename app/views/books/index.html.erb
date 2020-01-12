@@ -35,10 +35,14 @@
 						</td>
 						<td><%= link_to book.title, book, class: "book_#{book.id}" %></td>
 						<td><%= book.body %></td>
+
+						<!-- 検索から遷移した場合は、いいねを非表示 -->
+						<% unless params[:controller] == "searchs" && params[:action] == "search" %>
 						<td>
 							<%= render 'books/favoritefunc', book: book %>
 						</td>
 						<td><%= "コメント数：#{book.book_comments.count}" %></td>
+						<% end %>
 					</tr>
 					<% end %>
 				</tbody>

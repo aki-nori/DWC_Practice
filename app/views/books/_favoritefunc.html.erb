@@ -1,4 +1,4 @@
-<!-- いいね機能 -->
+	<!-- いいね機能 -->
 <% unless current_user.already_favorited?(book) %>
 	<%= link_to favorites_path(params: {user_id: current_user.id, book_id: book.id}), method: :post do %>
 	<i class="far fa-heart"></i>
