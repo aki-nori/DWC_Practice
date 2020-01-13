@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def show
-  	@book = Book.find(params[:id])
+    @book = Book.find(params[:id])
     @book_comment = BookComment.new
     @book_comments = BookComment.where(book_id: params[:id])
   end
@@ -28,8 +28,6 @@ class BooksController < ApplicationController
         redirect_to books_path
       end
   end
-
-
 
   def update
   	@book = Book.find(params[:id])

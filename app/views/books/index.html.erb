@@ -39,7 +39,9 @@
 						<!-- 検索から遷移した場合は、いいねを非表示 -->
 						<% unless params[:controller] == "searchs" && params[:action] == "search" %>
 						<td>
-							<%= render 'books/favoritefunc', book: book %>
+							<div id="favorite-<%= book.id %>">
+								<%= render 'books/favoritefunc', book: book %>
+							</div>
 						</td>
 						<td><%= "コメント数：#{book.book_comments.count}" %></td>
 						<% end %>
