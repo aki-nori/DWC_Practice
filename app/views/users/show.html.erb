@@ -45,11 +45,13 @@
 			<!--books一覧 -->
 		</div>
 	</div>
+	<% if @user == current_user %>
 	<div class="row">
 		<%= "住所：#{@user.address_string}" %>
 		<div id='map'>
 		</div>
 	</div>
+	<% end %>
 
 	<style>
 	#map{
