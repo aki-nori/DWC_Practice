@@ -38,7 +38,7 @@ gem 'bootstrap-sass'
 
 gem 'font-awesome-sass'
 
-gem 'rufo'
+gem 'jp_prefecture'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -82,3 +82,8 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 gem 'jquery-rails'
+
+gem 'dotenv-rails'
+
+gem "gmaps4rails"
+gem "geocoder"

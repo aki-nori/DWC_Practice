@@ -37,8 +37,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.string :profile_image_id
 
-      t.integer :postal_code
-      t.string :address
+      t.integer :postcode
+      t.integer :prefecture_code
+      t.string :address_city
+      t.string :address_street
+      t.string :address_building
     end
 
     add_index :users, :email,                unique: true
